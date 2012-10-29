@@ -1,0 +1,59 @@
+<div class="pull-right">
+  <button type="button" class="btn btn-success" ng-click="addNewEndpoint()">Add</button>
+</div>
+<div class="page-header">
+  <h1>Add <small>endpoint</small></h1>
+</div>
+
+<div class="alert alert-block {{error_msg_class}}">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  All fields are required
+</div>
+
+<form class="form-horizontal" name="add_new_endpoint_form">
+  <div class="control-group">
+    <label class="control-label">Name</label>
+    <div class="controls">
+      <input type="text"  name="endpoint_name" ng-model="api.name" required class="input-xxlarge" placeholder="GET /trap/:id">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Short</label>
+    <div class="controls">
+      <input type="text"  name="endpoint_short" ng-model="api.short" required class="input-xlarge" placeholder="get_trap_by_id">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Description</label>
+    <div class="controls">
+      <input type="text"  name="endpoint_description" ng-model="api.description" required class="input-xxlarge" placeholder="Get a trap by its id">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="method">Method</label>
+    <div class="controls">
+      <select name="endpoint_method" id="method" ng-model="api.method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="url">URL</label>
+    <div class="controls">
+      <input type="text" name="endpoint_url" ng-model="api.url" required class="input-xxlarge" id="url" placeholder="https://dev.trapit.com/api/v3/ti/trap/123">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="expected_response">Expected Response</label>
+    <div class="controls">
+      <div class="row-fluid">
+        <div class="span12">
+          <div id="editor"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

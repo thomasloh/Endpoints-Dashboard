@@ -1,0 +1,70 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+/* line 2, ../../app/styles/main.sass */
+body {
+  background-image: url("/images/retina_dust.png");
+}
+
+/* line 5, ../../app/styles/main.sass */
+.status {
+  overflow: visible;
+  top: -5px;
+  left: 0;
+  background: url("/images/status.png");
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin: 10px 5px 0 0;
+}
+/* line 14, ../../app/styles/main.sass */
+.status.up {
+  background-position: 0 0;
+}
+/* line 16, ../../app/styles/main.sass */
+.status.problem {
+  background-position: 0 -53px;
+}
+/* line 18, ../../app/styles/main.sass */
+.status.down {
+  background-position: 0 -26px;
+}
+
+/* line 21, ../../app/styles/main.sass */
+#editor {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+
+/* line 26, ../../app/styles/main.sass */
+.blur {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px);
+}
+
+/* line 34, ../../app/styles/main.sass */
+.navbar-inner .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* line 46, ../../app/styles/main.sass */
+h5 {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 49, ../../app/styles/main.sass */
+.spinner {
+  top: 1.5em;
+  left: 1.4em;
+}

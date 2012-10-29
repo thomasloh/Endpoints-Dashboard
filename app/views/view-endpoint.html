@@ -1,0 +1,82 @@
+<div class="pull-right {{endpoint_actions_class}}">
+  <a class="btn btn-info" href="/#/api/{{api.id}}/edit">Edit</a>
+  <a class="btn btn-danger" ng-click="showDeleteEndpointDialog()">Delete</a>
+</div>
+
+<div class="pull-right {{delete_dialog}}">
+  <a class="btn btn-danger" ng-click="confirmDeleteEndpoint()">Delete</a>
+  <a class="btn" ng-click="cancelDeleteEndpoint()">Cancel</a>
+</div>
+
+<div class="page-header">
+  <h1>View <small>endpoint</small></h1>
+</div>
+
+<div class="alert alert-error {{endpoint_found_class}}">
+  {{endpoint_not_found_msg}}
+</div>
+
+<form class="{{endpoint_detail_class}}">
+  <legend><span class="status {{api.status}} pull-right"></span>{{api.name}}</legend>
+  <div class="row-fluid">
+
+    <div class="span12">
+      <blockquote>
+        <p>{{api.description}}</p>
+      </blockquote>
+    </div>
+
+  </div>
+
+  <div class="row-fluid">
+
+    <div class="span10">
+
+      <div class="input-append">
+          <select class="span2" ng-model="api.method" ng-options="m.type for m in methods" disabled>
+          </select>
+          
+        <input class="input-xxlarge uneditable-input" id="url" type="text" disabled placeholder={{api.url}}>
+        <a class="btn btn-primary" ng-click="retest()">Re-test</a>
+
+      </div>
+
+    </div>
+
+    <div class="span2">
+<!--       <div class="progress progress-striped progress-success active status">
+        <div class="bar" style="width: 100%;"></div>
+      </div>
+ -->   
+        
+   </div>
+
+   <hr>
+
+  </div>
+
+  <div class="row-fluid">
+
+    <div class="span6">
+      <div class="span11">
+      <p class="lead"><h4>Expected Response</h4></p>
+        <pre class=" prettyprint expected-response-data">{{api.expected_response}}</pre>
+      </div>
+    </div>
+
+
+    <div class="span6">
+      <div class="span11">
+        <p class="lead"><h4>Actual Response</h4></p>
+        <pre class="prettyprint response-data">{{api.response_data}}</pre>
+      </div>
+    </div>
+
+  </div>
+
+</form>
+
+
+
+
+
